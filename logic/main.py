@@ -266,7 +266,7 @@ def evaluate_model(y_true,y_pred, model_name):
     print("R2 Value: ", r2)
     print("MSE: ", mse)
     print("RMSE: ",rmse)
-    print("/n")
+    print("\n")
 
 
 evaluate_model(Y_test,dt_pred, "Decision Tree")
@@ -280,9 +280,9 @@ plt.figure(figsize= (14,8))
 #Plot the actual value and predicted value
 plt.plot(Y_test.index, Y_test, label = "Actual Bank of America Stock Price", linewidth = 2, color = "red")
 plt.plot(Y_test.index, dt_pred, label = "Decision Tree Prediction", linewidth = 2, color = 'black', linestyle = "--")
-plt.plot(Y_test.index, rf_pred, label = "Random Forest Prediction", linewidth = 2, color = 'black', linestyle = "--")
-plt.plot(Y_test.index, knn_pred, label = "KNN Prediction", linewidth = 2, color = 'black', linestyle = "--")
-plt.plot(Y_test.index, svr_pred, label = "Support Vector Machine Prediction", linewidth = 2, color = 'black', linestyle = "--")
+plt.plot(Y_test.index, rf_pred, label = "Random Forest Prediction", linewidth = 2, color = 'yellow', linestyle = "--")
+plt.plot(Y_test.index, knn_pred, label = "KNN Prediction", linewidth = 2, color = 'green', linestyle = "--")
+plt.plot(Y_test.index, svr_pred, label = "Support Vector Machine Prediction", linewidth = 2, color = 'blue', linestyle = "--")
 
 #Highlight Title, xlabel & ylabel
 plt.title("Actual vs Predicted Bank of America Stock Price")
